@@ -5,8 +5,11 @@ module.exports = function(sequelize, dataTypes) {
         username: {
             type: dataTypes.STRING,
             allowNull: false,
-            len: [1, 30],
-            unique: true
+            unique: true,
+            validate: {
+                len: [1, 30],
+                notContains: ' ',
+            }
         },
         password: {
             type: dataTypes.STRING
@@ -15,6 +18,12 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING,
             isEmail: true,
             unique: true
+        },
+        bio: {
+            type: dataTypes.STRING,
+            validate: {
+                len: [1, 200]
+            }
         }
     })
 

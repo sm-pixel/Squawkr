@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryand67/Project-2.git"
+    "url": "git+https://github.com/ryand67/Squawkr.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ryand67/Project-2/issues"
+    "url": "https://github.com/ryand67/Squawkr/issues"
   },
-  "homepage": "https://github.com/ryand67/Project-2#readme"
+  "homepage": "https://github.com/ryand67/Squawkr#readme"
 }

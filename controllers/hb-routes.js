@@ -12,4 +12,8 @@ module.exports = function(app){
     app.get('/home', (req, res) => {
         res.render('home');
     })
+
+    app.get('/profile', (req, res) => {
+        res.render('profile');
+    })
 }

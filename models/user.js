@@ -1,6 +1,6 @@
 const bcrypt = require('bcryptjs');
 
-module.exports = function(seuelize, dataTypes) {
+module.exports = function(sequelize, dataTypes) {
     const User = sequelize.define("User", {
         username: {
             type: dataTypes.STRING,
@@ -26,11 +26,11 @@ module.exports = function(seuelize, dataTypes) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
     })
 
-    User.associate = function(models) {
-        User.hasMany(models.post, {
-            onDelete: "cascade"
-        })
-    }
+    // User.associate = function(models) {
+    //     User.hasMany(models.post, {
+    //         onDelete: "cascade"
+    //     })
+    // }
 
     return User;
 }

@@ -1,17 +1,31 @@
-<i class="fab fa-speakap"></i>
-    <div class="ui vertical menu">
-        <a class="active blue item">
-            Home
-            <div class="ui blue left pointing label"></div>
+<i class="fab fa-earlybirds"></i>
+<div class="ui vertical menu">
+    <a class="active blue item"><i class="home icon"></i>
+        home
         </a>
-        <a class="item">
-            Profile
-        </a>
+    <a class="item"><i class="id badge outline icon"></i>
+        profile
+    </a>
 
-        <div class="item">
-            <div class="ui transparent icon input">
-                <input type="text" placeholder="Search...">
-                <i class="search icon"></i>
-            </div>
+    <div class="item">
+        <div class="ui transparent icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search icon"></i>
         </div>
     </div>
+</div>
+{{!-- form to post squawk --}}
+<div class="ui raised very padded text container segment">
+    <div>
+        <a class="ui pointing below blue basic label">squawk here</a></div>
+    <div><textarea class="fluid" rows="2"></textarea>
+    </div>
+    <div class="ui primary submit button">submit</div>
+</div>
+
+{{!-- posted by user --}}
+<div class="ui raised very padded text container segment">
+    <h3 class="ui header">username</h3>
+    <p>squawk, squawk, squawk</p>
+    <p>time</p>
+</div>

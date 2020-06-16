@@ -25,7 +25,7 @@ require('./controllers/api-user-routes')(app);
 require('./controllers/hb-routes')(app);
 require('./controllers/api-post-routes')(app);
 
-db.sequelize.sync({force: true}).then(() => {
+db.sequelize.sync({force: false}).then(() => {
     app.listen(PORT, () => {
         console.log(`LISTENING ON: ${PORT}`);
     })

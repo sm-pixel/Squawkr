@@ -1,5 +1,8 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
+const session = require("express-session");
+// Requiring passport as we've configured it
+const passport = require("./config/passport");
 
 const app = express();
 
@@ -14,6 +17,10 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 require('./controllers/api-user-routes')(app);
 require('./controllers/hb-routes')(app);

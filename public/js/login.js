@@ -1,8 +1,8 @@
 $(document).ready(function () {
     // get references to our forms/inputs
     const loginBuild = $("form.login");
-    const usernameInput = $("input#username-input");
-    const passwordInput = $("input#password-input");
+    const usernameInput = $("#username-input");
+    const passwordInput = $("#password-input");
 
     //confirm there is username and password entered
     loginBuild.on("submit", function (instance) {
@@ -29,7 +29,7 @@ $(document).ready(function () {
             password: password
         })
             .then(function () {
-                window.location.replace("/profile");
+                window.location.replace("/home");
             })
             .catch(function (err) {
                 console.log(err);

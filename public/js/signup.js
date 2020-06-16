@@ -22,7 +22,7 @@
 
         }).then(function () {
             console.log("created new user");
-            location.reload();
+            window.location.replace("/login");
         })
     })
  })

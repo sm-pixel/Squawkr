@@ -2,15 +2,6 @@ const db = require('../models');
 const passport = require("../config/passport");
 
 module.exports = function(app){
-    // app.post('/api/user', (req, res) => {
-    //     db.User.create({
-    //         username: req.body.username,
-    //         password: req.body.password,
-    //         email: req.body.email
-    //     }).then((result) => {
-    //         res.json(result);
-    //     })
-    // })
     app.post("/api/login", passport.authenticate("local"), function(req, res) {
         res.json(req.user);
       });
@@ -20,7 +11,7 @@ module.exports = function(app){
       // otherwise send back an error
       app.post("/api/signup", function(req, res) {
           console.log(req.body)
-        db.User.create (req.body)
+        db.User.create(req.body)
           .then(function() {
             res.redirect(307, "/api/login");
           })
@@ -49,7 +40,9 @@ module.exports = function(app){
           });
         }
       });
-      
 
-
+    app.delete('/api/user/:id', (req, res) => {
+      let userId = req.params.id;
+      db.User.destroy({where: {id: userId}}).then(() => res.redirect('/'));
+    })
 }

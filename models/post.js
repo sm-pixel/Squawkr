@@ -4,17 +4,20 @@ module.exports = function(sequelize, dataTypes) {
             type: dataTypes.STRING
         },
         likes: {
+            type: dataTypes.INTEGER,
+            defaultValue: 0
+        },
+        authorId: {
             type: dataTypes.INTEGER
+        },
+        author: {
+            type: dataTypes.STRING
+        },
+        liked: {
+            type: dataTypes.BOOLEAN,
+            defaultValue: false
         }
     })
-
-    Post.associate = function(models){
-        Post.belongsTo(models.User, {
-            foreignKey: {
-                allowNull: false
-            }
-        })
-    }
 
     return Post;
 }

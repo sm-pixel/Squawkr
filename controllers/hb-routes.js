@@ -1,7 +1,11 @@
 const db = require('../models');
 
 module.exports = function(app){
-    app.get('/' || '/login', (req, res) => {
+    app.get('/', (req, res) => {
+        res.render('login')
+    })
+
+    app.get('/login', (req, res) => {
         res.render('login')
     })
 

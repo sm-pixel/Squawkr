@@ -1,8 +1,8 @@
 $(document).ready(function () {
     // get references to our forms/inputs
     const loginBuild = $("form.login");
-    const usernameInput = $("#username-input");
-    const passwordInput = $("#password-input");
+    const usernameInput = $("#username");
+    const passwordInput = $("#password");
 
     //confirm there is username and password entered
     loginBuild.on("submit", function (instance) {

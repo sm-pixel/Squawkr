@@ -21,7 +21,6 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 require('./controllers/api-user-routes')(app);
 require('./controllers/hb-routes')(app);
 require('./controllers/api-post-routes')(app);

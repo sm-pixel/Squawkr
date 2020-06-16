@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    console.log("connected")
     // get references to our forms/inputs
     const loginBuild = $("form.login");
     const usernameInput = $("#username");

@@ -9,6 +9,7 @@ module.exports = function(app){
         res.render('login')
     })
 
+
     app.get('/signup', (req, res) => {
         res.render('signup');
     })

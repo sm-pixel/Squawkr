@@ -30,6 +30,7 @@ module.exports = function(app){
           bio: req.body.bio,
           password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null)
         }).then(function(result2) {
+          console.log(req.user)
           res.json(result2);
         })
       })

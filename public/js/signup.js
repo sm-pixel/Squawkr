@@ -1,6 +1,8 @@
 //submit button
  $(document).ready( function () {
     console.log("connected")
+
+    $("#signuperror").hide()
     $(".create-form").submit( function (event) {
         event.preventDefault();
         console.log('submitted')
@@ -23,6 +25,9 @@
         }).then(function () {
             console.log("created new user");
             window.location.replace("/login");
-        })
+        }).catch(function (err) {
+            console.log(err);
+            $("#signuperror").show();
+        });
     })
  })

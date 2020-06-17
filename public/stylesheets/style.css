@@ -65,3 +65,7 @@ nav {
 .charCountText {
     color: white;
 }
+
+#loginerror, #signuperror {
+    margin-bottom: 1em;
+}

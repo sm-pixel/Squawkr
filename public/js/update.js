@@ -21,7 +21,11 @@ $(document).ready( function () {
 
         }).then(function () {
             console.log("updated");
-            window.location.replace("/profile");
+            // window.location.replace("/profile");
+            $.ajax({url: "/logout", method: "GET"}).then(() =>{
+                window.location.replace("/login")
+            }
+            )
         }).catch(function (err) {
             console.log(err);
             // $("#signuperror").show();

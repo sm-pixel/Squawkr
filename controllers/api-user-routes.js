@@ -37,7 +37,8 @@ module.exports = function(app){
           res.json({
             username: req.user.username,
             id: req.user.id,
-            bio: req.user.bio
+            bio: req.user.bio,
+            name: req.user.name
           });
         }
       });

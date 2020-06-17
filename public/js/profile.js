@@ -3,8 +3,9 @@ $(document).ready(function() {
     // and updates the HTML on the page
     $.get("/api/user_data").then(function(data) {
       console.log(data)
-      $("#username").text(data.username);
+      $("#username").text('@' + data.username);
       $("#bio").text(data.bio);
+      $("#name").text(data.name);
     });
 
     $("#logoutButton").on("click", (event) => {

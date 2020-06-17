@@ -15,7 +15,10 @@ module.exports = function(app){
     })
 
     app.get('/home', (req, res) => {
-        res.render('home');
+        db.Post.findAll().then((result) => {
+            console.log(result);
+            res.render('home', {post: result});
+        })
     })
 
     app.get('/profile', (req, res) => {

@@ -1,10 +1,10 @@
 <i class="fab fa-earlybirds"></i>
 <div class="ui vertical menu">
     <a class="active blue item" href="/home"><i class="home icon"></i>
-        home
+        Home
         </a>
     <a class="item" href="/profile"><i class="user outline icon"></i></i>
-        profile
+        Profile
     </a>
 
     <div class="item">
@@ -14,19 +14,24 @@
         </div>
     </div>
 </div>
+    <button class="ui primary submit button" id="logoutButton">Logout</button>
 {{!-- form to post squawk --}}
 <div class="ui raised very padded text blue inverted container segment">
     <div>
         <a class="ui pointing below blue basic label">squawk here</a></div>
-    <div><textarea class="fluid" rows="2"></textarea>
+    <div><textarea class="fluid" rows="2" id="squawkBox"></textarea>
     </div>
-    <button class="ui primary submit button">submit</button>
+    <button class="ui primary submit button" id="squawkSubmit">submit</button>
 </div>
 
 {{!-- posted by user --}}
+{{#each post}}
 <div class="ui raised very padded text blue inverted container segment">
-    <h3 class="ui header">username</h3>
-    <p>squawk, squawk, squawk</p>
-    <p>time</p>
+    <h3 class="ui header">@{{post.dataTypes.author}}</h3>
+    <p>{{post.dataTypes.body}}</p>
+    <p></p>
 </div>
+{{/each}}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/home.js"></script>

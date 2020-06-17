@@ -31,7 +31,15 @@ module.exports = function(app){
 
     app.get('/profile', (req, res) => {
         if(req.user){
-            res.render('profile');
+            console.log(req.user);
+            db.Post.findAll({where: {author: req.user.username}}).then((result) => {
+                let holder = [];
+                for(let i = result.length - 1; i >= 0; i--) {
+                    holder.push(result[i].dataValues);
+                }
+                console.log(holder);
+                res.render('profile', {post: holder});
+            })
         } else {
             res.redirect('/');
         }

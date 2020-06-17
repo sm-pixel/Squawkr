@@ -44,6 +44,21 @@ module.exports = function(app){
         }
       });
 
+      app.get('/profile/:author', (req, res) => {
+        let paramUser = req.params.author;
+        let userResult;
+        db.User.findOne({where: {username: paramUser}}).then((result) => {
+          userResult = result.dataValues;
+          db.Post.findAll({where: {author: paramUser}}).then((result2) => {
+            let holder = [];
+                for(let i = result2.length - 1; i >= 0; i--) {
+                    holder.push(result2[i].dataValues);
+                }
+                res.render('otherProfile', {post: holder, user: userResult});
+          })
+        })
+      })
+
     app.delete('/api/user/:id', (req, res) => {
       let userId = req.params.id;
       db.User.destroy({where: {id: userId}}).then(() => res.redirect('/'));

@@ -1,0 +1,44 @@
+<header class="siteHeader">
+    <nav>
+        <p><a href="/home">HOME</a></p>
+        <div class="logodiv">
+            <i class="fas fa-crow fa-3x logo home-logo-click"></i>
+            <h1 class="site-title home-logo-click">Squawkr</h1>
+        </div>
+        <p><a href="/profile">PROFILE</a></p>
+    </nav>
+    <button class="ui primary submit button" id="logoutButton">Logout</button>
+</header>
+{{!-- contains the bio info --}}
+{{!-- <div class="ui raised very padded text blue inverted container segment">
+     <i class="fab fa-earlybirds"></i>
+    <div class="ui card centered segment">
+        <a class="image" href="#">
+            <img src="">
+        </a>
+        </div>
+        <div class="ui card centered segment">
+            <h3>Welcome <span id="username"></span></h2>
+            <p>Bio: <span id="bio"></span></p>
+        </div> --}}
+<div class="profile">
+    <div class="profileHeaderDiv centered raised ui segment">
+        <h1 class="profileHeader"><span>{{user.name}}</span></h1>
+        <div class="un-loc">
+            <h2><span>@{{user.username}}</span> - <span>{{user.location}}</span></h2>
+        </div>
+        <div class="ui very padded text container blue">
+            <p class="bio">About Me:</p>
+            <p class="bio">{{user.bio}}</p>
+        </div>
+    </div>
+</div>
+{{#each post}}
+<div class="ui raised very padded text blue inverted container segment">
+    <h3 class="ui header">@{{author}}</h3>
+    <p class="squawkBody">{{body}}</p>
+    <p>{{squawkTime}}</p>
+</div>
+{{/each}}
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

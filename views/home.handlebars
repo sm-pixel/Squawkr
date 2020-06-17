@@ -1,32 +1,32 @@
-<i class="fab fa-earlybirds"></i>
-<div class="ui vertical menu">
-    <a class="active blue item" href="/home"><i class="home icon"></i>
-        home
-        </a>
-    <a class="item" href="/profile"><i class="user outline icon"></i></i>
-        profile
-    </a>
-
-    <div class="item">
-        <div class="ui transparent icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search icon"></i>
+<header class="siteHeader">
+    <nav>
+        <p><a href="/home">HOME</a></p>
+        <div class="logodiv">
+            <i class="fas fa-crow fa-3x logo home-logo-click"></i>
+            <h1 class="site-title home-logo-click">Squawkr</h1>
         </div>
-    </div>
-</div>
+        <p><a href="/profile">PROFILE</a></p>
+    </nav>
+    <button class="ui primary submit button" id="logoutButton">Logout</button>
+</header>
 {{!-- form to post squawk --}}
-<div class="ui raised very padded text blue inverted container segment">
+<div class="ui raised padded text blue inverted container segment">
     <div>
         <a class="ui pointing below blue basic label">squawk here</a></div>
-    <div><textarea class="fluid" rows="2"></textarea>
+    <div><textarea class="fluid" rows="2" id="squawkBox" maxlength="150"></textarea>
     </div>
-    <button class="ui primary submit button">submit</button>
+    <button class="ui inverted basic button" id="squawkSubmit">Squawk</button>
+    <p class="charCountText"><span id="charCount">0</span>/150</p>
 </div>
 
 {{!-- posted by user --}}
+{{#each post}}
 <div class="ui raised very padded text blue inverted container segment">
-    <h3 class="ui header">username</h3>
-    <p>squawk, squawk, squawk</p>
-    <p>time</p>
+    <h3 class="ui header">@{{author}}</h3>
+    <p>{{body}}</p>
+    <p>{{createdAt}}</p>
 </div>
+{{/each}}
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/home.js"></script>

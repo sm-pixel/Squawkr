@@ -6,8 +6,15 @@ $(document).ready(function() {
       $("#username").text(data.username);
       $("#bio").text(data.bio);
     });
-    
-   
-    });
-  
-  
+
+    $("#logoutButton").on("click", (event) => {
+      event.preventDefault();
+      $.ajax({
+          url: '/logout',
+          method: 'GET'
+      }).then(() => {
+          console.log('asdf');
+          location.replace('/');
+      })
+  })
+});  

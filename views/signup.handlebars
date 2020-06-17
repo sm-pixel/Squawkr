@@ -1,31 +1,36 @@
+<header class="siteHeader">
+        <i class="fas fa-crow fa-3x logo home-logo-click"></i>
+        <h1 class="site-title home-logo-click">Squawkr</h1>
+    </header>
 <div class="ui raised very padded text blue inverted container segment">
 <form class="ui form segment create-form">
-        <p>Tell Us About Yourself</p>
+        <h2>Tell Us About Yourself</h2>
         <div class="field">
-            <label>name</label>
-            <input placeholder="first name" name="name" type="text" id ="name">
+            <label>Name</label>
+            <input placeholder="Name" name="name" type="text" id ="name">
         </div>
         <div class="two fields">
           <div class="field">
-            <label>username</label>
-            <input placeholder="username" name="username" type="text" id ="username">
+            <label>Username</label>
+            <input placeholder="Username" name="username" type="text" id ="username">
           </div>
           <div class="field">
-            <label>password</label>
-            <input type="password" name="password" id= "password">
+            <label>Password</label>
+            <input placeholder="Password" type="password" name="password" id= "password">
           </div>
         </div>
         <div class="field">
-          <label>email</label>
+          <label>Email</label>
           <input placeholder="email@email.com" type="email" name="email" id="email">
         </div>
         <div class="field">
-          <label>bio</label>
-          <input placeholder="tell us about yourself" type="text" name="bio" id="bio">
+          <label>Bio</label>
+          <textarea placeholder="Tell Us About Yourself" type="text" name="bio" id="bio" rows="5"></textarea>
         </div>
         
         <button class="ui primary submit button" type="submit">Submit</button>
         <div class="ui error message"></div>
+        <p><a href="/login">Already have an account? Login here</a></p>
       </form>
       </div>
 

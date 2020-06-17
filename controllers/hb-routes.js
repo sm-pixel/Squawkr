@@ -15,10 +15,24 @@ module.exports = function(app){
     })
 
     app.get('/home', (req, res) => {
-        res.render('home');
+        if(req.user){
+            db.Post.findAll().then((result) => {
+                let holder = [];
+                for(let i = 0; i < result.length; i++) {
+                    holder.push(result[i].dataValues);
+                }
+                res.render('home', {post: holder});
+            })
+        } else {
+            res.redirect('/');
+        }
     })
 
     app.get('/profile', (req, res) => {
-        res.render('profile');
+        if(req.user){
+            res.render('profile');
+        } else {
+            res.redirect('/');
+        }
     })
 }

@@ -1,6 +1,7 @@
 $(document).ready(() => {
     let squawkBox = $("#squawkBox");
     let squawkSubmit = $("#squawkSubmit");
+    let charCount = $("#charCount");
 
     squawkSubmit.on('click', (event) => {
         event.preventDefault();
@@ -14,6 +15,14 @@ $(document).ready(() => {
             console.log('posted');
             location.reload();
         })
+    })
+
+    squawkBox.on('keyup', () => {
+        if(squawkBox.val().length < 151){
+            charCount.text(squawkBox.val().length);
+        } else {
+            
+        }
     })
 
     $("#logoutButton").on("click", (event) => {

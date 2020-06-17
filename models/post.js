@@ -1,7 +1,10 @@
 module.exports = function(sequelize, dataTypes) {
     const Post = sequelize.define('Post', {
         body: {
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            validate: {
+                len: [1, 150]
+            }
         },
         likes: {
             type: dataTypes.INTEGER,

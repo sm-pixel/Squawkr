@@ -61,3 +61,7 @@ nav {
     position: absolute;
     right: 5em;
 }
+
+.charCountText {
+    color: white;
+}

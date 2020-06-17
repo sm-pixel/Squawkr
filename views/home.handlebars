@@ -13,9 +13,10 @@
 <div class="ui raised padded text blue inverted container segment">
     <div>
         <a class="ui pointing below blue basic label">squawk here</a></div>
-    <div><textarea class="fluid" rows="2" id="squawkBox"></textarea>
+    <div><textarea class="fluid" rows="2" id="squawkBox" maxlength="150"></textarea>
     </div>
     <button class="ui inverted basic button" id="squawkSubmit">Squawk</button>
+    <p class="charCountText"><span id="charCount">0</span>/150</p>
 </div>
 
 {{!-- posted by user --}}

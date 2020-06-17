@@ -1,0 +1,42 @@
+<header class="siteHeader">
+    <nav>
+        <p><a href="/home">HOME</a></p>
+        <div class="logodiv">
+            <i class="fas fa-crow fa-3x logo home-logo-click"></i>
+            <h1 class="site-title home-logo-click">Squawkr</h1>
+        </div>
+        <p><a href="/profile">PROFILE</a></p>
+    </nav>
+    <button class="ui primary submit button" id="logoutButton">Logout</button>
+</header>
+<div class="ui raised very padded text blue inverted container segment">
+    <form class="ui form segment create-form">
+        <h2>Update Now!</h2>
+
+        <div class="two fields">
+            <div class="field">
+                <label>Name</label>
+                <input placeholder="Name" name="name" type="text" id="name">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input placeholder="Password" type="password" name="password" id="password">
+            </div>
+        </div>
+        <div class="field">
+            <label>Location</label>
+            <input placeholder="City, State" type="text" name="location" id="location">
+        </div>
+        <div class="field">
+            <label>Bio</label>
+            <textarea placeholder="Tell Us About Yourself" type="text" name="bio" id="bio" rows="5"></textarea>
+        </div>
+        <div>
+            <button class="ui primary submit button" type="submit">Submit</button>
+        </div>
+
+        </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/update.js"></script>

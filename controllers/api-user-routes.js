@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs")
 const db = require('../models');
 const passport = require("../config/passport");
 
@@ -19,7 +20,20 @@ module.exports = function(app){
             res.status(401).json(err);
           });
       });
-    
+    // Route for changing user info
+    app.put("/api/update", function(req, res) {
+      console.log(req.body)
+      db.User.findOne({where: {username: req.user.username}}).then((result) => {
+        result.update({
+          name: req.body.name,
+          location: req.body.location,
+          bio: req.body.bio,
+          password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null)
+        }).then(function(result2) {
+          res.json(result2);
+        })
+      })
+  });
       // Route for logging user out
       app.get("/logout", function(req, res) {
         req.logout();

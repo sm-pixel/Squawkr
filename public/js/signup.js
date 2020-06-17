@@ -11,12 +11,14 @@
         var password = $("#password").val()
         var email = $("#email").val().trim()
         var bio = $("#bio").val().trim()
+        var location = $("#location").val().trim();
         var holder = {
             name: name,
             username: username,
             password: password,
             email: email,
-            bio: bio
+            bio: bio,
+            location: location
         }
         $.ajax("/api/signup", {
             type: "POST",

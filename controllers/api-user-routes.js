@@ -38,7 +38,8 @@ module.exports = function(app){
             username: req.user.username,
             id: req.user.id,
             bio: req.user.bio,
-            name: req.user.name
+            name: req.user.name,
+            location: req.user.location
           });
         }
       });

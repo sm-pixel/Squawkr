@@ -1,5 +1,7 @@
 $(document).ready(() => {
     $(".home-logo-click").on('click', () => {
-        location.replace('/');
+        if(location.pathname === '/home' || location.pathname === '/profile') {
+            location.replace('/home');
+        }
     })
 })

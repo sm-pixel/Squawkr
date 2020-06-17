@@ -28,3 +28,9 @@ body {
     transform: scale(1.05);
     transition: .3s ease-in-out;
 }
+
+#squawkBox {
+    width: 100%;
+    resize: none;
+    height: 5em;
+}

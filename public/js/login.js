@@ -6,13 +6,13 @@ $(document).ready(function () {
     const passwordInput = $("#password");
 
     //confirm there is username and password entered
-    loginBuild.on("submit", function (instance) {
-        instance.preventDefault();
+    loginBuild.on("submit", function(event) {
+        event.preventDefault();
         const memberData = {
             username: usernameInput.val().trim(),
             password: passwordInput.val().trim()
         };
-
+        console.log(memberData)
         if (!memberData.username || !memberData.password) {
             return;
         }
@@ -25,6 +25,7 @@ $(document).ready(function () {
 
     //function above does a post to our api/login route andredirects us to the users profile
     function loginMember(username, password) {
+        console.log("working")
         $.post("/api/login", {
             username: username,
             password: password

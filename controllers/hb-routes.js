@@ -13,7 +13,11 @@ module.exports = function(app){
     app.get('/signup', (req, res) => {
         res.render('signup');
     })
-
+   
+    app.get('/update', (req, res) => {
+        res.render('update');
+    })
+    
     app.get('/home', (req, res) => {
         if(req.user){
             db.Post.findAll().then((result) => {

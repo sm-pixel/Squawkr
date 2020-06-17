@@ -29,7 +29,7 @@ module.exports = function(app){
     })
 
     app.get('/profile', (req, res) => {
-        if(res.user){
+        if(req.user){
             res.render('profile');
         } else {
             res.redirect('/');

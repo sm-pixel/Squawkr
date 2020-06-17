@@ -10,7 +10,7 @@
     <button class="ui primary submit button" id="logoutButton">Logout</button>
 </header>
 {{!-- form to post squawk --}}
-<div class="ui raised very padded text blue inverted container segment">
+<div class="ui raised padded text blue inverted container segment">
     <div>
         <a class="ui pointing below blue basic label">squawk here</a></div>
     <div><textarea class="fluid" rows="2" id="squawkBox"></textarea>
@@ -21,9 +21,9 @@
 {{!-- posted by user --}}
 {{#each post}}
 <div class="ui raised very padded text blue inverted container segment">
-    <h3 class="ui header">@{{post.dataTypes.author}}</h3>
-    <p>{{post.dataTypes.body}}</p>
-    <p></p>
+    <h3 class="ui header">@{{author}}</h3>
+    <p>{{body}}</p>
+    <p>{{createdAt}}</p>
 </div>
 {{/each}}
 

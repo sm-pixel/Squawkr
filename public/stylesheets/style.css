@@ -58,6 +58,6 @@ nav {
 }
 
 #logoutButton {
-    position: fixed;
+    position: absolute;
     right: 5em;
 }

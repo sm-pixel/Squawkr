@@ -22,9 +22,9 @@
 {{!-- posted by user --}}
 {{#each post}}
 <div class="ui raised very padded text blue inverted container segment">
-    <h3 class="ui header">@{{author}}</h3>
-    <p>{{body}}</p>
-    <p>{{createdAt}}</p>
+    <h3 class="ui header"><a href="/profile/{{author}}">@{{author}}</a></h3>
+    <p class="squawkBody">{{body}}</p>
+    <p>{{squawkTime}}</p>
 </div>
 {{/each}}
 

@@ -17,7 +17,6 @@ module.exports = function(app){
     app.get('/home', (req, res) => {
         if(req.user){
             db.Post.findAll().then((result) => {
-                console.log(result.length);
                 let holder = [];
                 for(let i = result.length - 1; i >= 0; i--) {
                     holder.push(result[i].dataValues);
@@ -31,13 +30,25 @@ module.exports = function(app){
 
     app.get('/profile', (req, res) => {
         if(req.user){
-            console.log(req.user);
             db.Post.findAll({where: {author: req.user.username}}).then((result) => {
                 let holder = [];
                 for(let i = result.length - 1; i >= 0; i--) {
                     holder.push(result[i].dataValues);
                 }
-                console.log(holder);
+                res.render('profile', {post: holder});
+            })
+        } else {
+            res.redirect('/');
+        }
+    })
+
+    app.get('/profile/:author', (req, res) => {
+        if(req.user){
+            db.Post.findAll({where: {author: req.params.author}}).then((result) => {
+                let holder = [];
+                for(let i = result.length - 1; i >= 0; i--) {
+                    holder.push(result[i].dataValues);
+                }
                 res.render('profile', {post: holder});
             })
         } else {

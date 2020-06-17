@@ -19,6 +19,9 @@ module.exports = function(sequelize, dataTypes) {
         liked: {
             type: dataTypes.BOOLEAN,
             defaultValue: false
+        },
+        squawkTime: {
+            type: dataTypes.STRING
         }
     })
 

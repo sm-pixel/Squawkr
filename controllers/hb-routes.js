@@ -17,8 +17,9 @@ module.exports = function(app){
     app.get('/home', (req, res) => {
         if(req.user){
             db.Post.findAll().then((result) => {
+                console.log(result.length);
                 let holder = [];
-                for(let i = 0; i < result.length; i++) {
+                for(let i = result.length - 1; i >= 0; i--) {
                     holder.push(result[i].dataValues);
                 }
                 res.render('home', {post: holder});

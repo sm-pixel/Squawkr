@@ -1,5 +1,7 @@
 $(document).ready(function () {
     console.log("connected")
+
+    $("#loginerror").hide()
     // get references to our forms/inputs
     const loginBuild = $("form.login");
     const usernameInput = $("#username");
@@ -35,6 +37,7 @@ $(document).ready(function () {
             })
             .catch(function (err) {
                 console.log(err);
+                $("#loginerror").show();
             });
     }
 })

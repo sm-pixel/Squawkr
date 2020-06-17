@@ -6,6 +6,7 @@ $(document).ready(function() {
       $("#username").text('@' + data.username);
       $("#bio").text(data.bio);
       $("#name").text(data.name);
+      $("#userLocation").text(" - " + data.location);
     });
 
     $("#logoutButton").on("click", (event) => {

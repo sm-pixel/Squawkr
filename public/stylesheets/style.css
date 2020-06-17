@@ -33,6 +33,13 @@ nav a:hover {
     color: var(--main-blue);
 }
 
+.loginSignupThing {
+    color: var(--main-blue);
+}
+
+.loginSignupThing:hover {
+    color: var(--main-blue);
+}
 .squawkBody {
     font-size: 2rem;
 }

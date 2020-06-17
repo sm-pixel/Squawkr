@@ -1,4 +1,5 @@
 const db = require('../models');
+const moment = require('moment');
 
 module.exports = function(app){
     //Create a post
@@ -6,7 +7,8 @@ module.exports = function(app){
         db.Post.create({
             body: req.body.body,
             authorId: req.user.id,
-            author: req.user.username
+            author: req.user.username,
+            squawkTime: moment().format('MMMM Do YYYY, h:mm:ss a')
         }).then((result) => {
             res.json(result);
         })

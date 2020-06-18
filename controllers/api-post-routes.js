@@ -21,7 +21,7 @@ module.exports = function(app){
 
     app.delete('/api/post/:id', (req, res) => {
         let postId = req.params.id;
-        db.Post.destroy({where: {id: postId}}).then((result) => res.redirect("/home"));
+        db.Post.destroy({where: {id: postId}}).then((result) => res.json(result));
     })
 
     //Likes/dislikes

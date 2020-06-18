@@ -10,6 +10,17 @@ $(document).ready(function() {
       $("#profilePicture").attr('src', data.profilePic)
     });
 
+    $("#updateButton").on("click", (event) => {
+      event.preventDefault();
+      $.ajax({
+        url: '/update',
+        method: 'GET'
+      }).then(() => {
+        console.log("updating...");
+        location.replace('/update')
+      })
+    })
+
     $("#logoutButton").on("click", (event) => {
       event.preventDefault();
       $.ajax({

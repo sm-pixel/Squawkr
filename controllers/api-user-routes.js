@@ -28,7 +28,8 @@ module.exports = function(app){
           name: req.body.name,
           location: req.body.location,
           bio: req.body.bio,
-          password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null)
+          password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null),
+          profilePic: req.body.profilePic
         }).then(function(result2) {
           console.log(req.user)
           res.json(result2);
@@ -54,7 +55,8 @@ module.exports = function(app){
             id: req.user.id,
             bio: req.user.bio,
             name: req.user.name,
-            location: req.user.location
+            location: req.user.location,
+            profilePic: req.user.profilePic
           });
         }
       });

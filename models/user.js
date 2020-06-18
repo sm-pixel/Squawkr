@@ -36,10 +36,14 @@ module.exports = function(sequelize, DataTypes) {
          allowNull: true,
          len: [5,200]
        },
-     location: {
-       type: DataTypes.STRING
-     }
+    location: {
+      type: DataTypes.STRING
+    },
 
+    profilePic: {
+      type: DataTypes.STRING,
+      defaultValue: 'https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s1600/BlueHead.jpg'
+    }
   });
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {

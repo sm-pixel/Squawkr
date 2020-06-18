@@ -130,14 +130,32 @@ nav {
     margin: 1em 0;
 }
 
-
 .bio {
-    width: 50%;
-    margin: .5em auto;
+    margin: .5em 0;
+    width: 100%;
     font-size: 2rem;
 }
 
 
+
 #bio-remaining {
     text-align: right;
+}
+
+#profilePicture{
+    margin-top: 1em;
+    margin: 0 auto;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profilePicture{
+    margin-top: 1em;
+    margin: 0 auto;
+    height: 12em;
+    width: 12em;
+    border-radius: 50%;
+    overflow: hidden;
 }

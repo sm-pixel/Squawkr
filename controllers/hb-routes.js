@@ -15,7 +15,11 @@ module.exports = function(app){
     })
    
     app.get('/update', (req, res) => {
-        res.render('update');
+        if(req.user){
+            res.render('update');
+        }else{
+            res.redirect('login');
+        }
     })
     
     app.get('/home', (req, res) => {

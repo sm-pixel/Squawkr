@@ -13,13 +13,15 @@
         var email = $("#email").val().trim()
         var bio = $("#bio").val().trim()
         var location = $("#location").val().trim();
+        var profilePic = $("#profilePicLink").val().trim();
         var holder = {
             name: name,
             username: username,
             password: password,
             email: email,
             bio: bio,
-            location: location
+            location: location,
+            profilePic: profilePic
         }
         $.ajax("/api/signup", {
             type: "POST",

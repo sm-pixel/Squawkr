@@ -136,15 +136,6 @@ nav {
     font-size: 2rem;
 }
 
-.bioCard {
-    width: 45%;
-    text-align: center;
-    color: var(--main-blue);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
 #profilePicture{
     margin-top: 1em;
     margin: 0 auto;

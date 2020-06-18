@@ -80,6 +80,6 @@ module.exports = function(app){
 
     app.delete('/api/user/:id', (req, res) => {
       let userId = req.params.id;
-      db.User.destroy({where: {id: userId}}).then(() => res.redirect('/'));
+      db.User.destroy({where: {id: userId}}).then((result) => res.json(result));
     })
 }

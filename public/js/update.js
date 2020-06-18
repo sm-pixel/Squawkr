@@ -1,5 +1,12 @@
 $(document).ready( function () {
     console.log("connected")
+    $.get("/api/user_data").then(function(data) {
+        console.log(data)
+        $("#bio").text(data.bio);
+        $("#name").text(data.name);
+        $("#location").text(" - " + data.location);
+        $("#profilePicture").attr('src', data.profilePic)
+      });
 
     $("#signuperror").hide()
     $(".create-form").submit( function (event) {

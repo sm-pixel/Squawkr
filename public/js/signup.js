@@ -14,8 +14,8 @@
         var bio = $("#bio").val().trim()
         var location = $("#location").val().trim();
         var profilePic = $("#profilePicLink").val().trim();
-        if(profilePic === '') {
-            profilePic = 'https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s1600/BlueHead.jpg'
+        if(profilePic === ''){
+            profilePic = 'https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s1600/BlueHead.jpg';
         }
         var holder = {
             name: name,
@@ -30,7 +30,7 @@
             type: "POST",
             data: holder
 
-        }).then(function () {
+        }).then(function() {
             console.log("created new user");
             window.location.replace("/login");
         }).catch(function (err) {

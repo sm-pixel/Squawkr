@@ -21,13 +21,22 @@ $(document).ready(function() {
       })
     })
 
+    $(document).on('click', '.trashButton', (event) => {
+      let postId = event.target.attributes[0].value;
+      $.ajax({
+        url: `/api/post/${postId}`,
+        method: 'DELETE'
+      }).then(() => {
+        window.location.reload();
+      })
+    })
+
     $("#logoutButton").on("click", (event) => {
       event.preventDefault();
       $.ajax({
           url: '/logout',
           method: 'GET'
       }).then(() => {
-          console.log('asdf');
           location.replace('/');
       })
   })

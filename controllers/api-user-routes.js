@@ -11,7 +11,6 @@ module.exports = function(app){
       // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
       // otherwise send back an error
       app.post("/api/signup", function(req, res) {
-          console.log(req.body)
         db.User.create(req.body)
           .then(function() {
             res.redirect(307, "/api/login");
@@ -31,8 +30,11 @@ module.exports = function(app){
           password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null),
           profilePic: req.body.profilePic
         }).then(function(result2) {
-          console.log(req.user)
-          res.json(result2);
+         
+          req.logIn(result2, function(err) {
+            if (err) throw err;
+            res.json(result2);
+          });
         })
       })
   });

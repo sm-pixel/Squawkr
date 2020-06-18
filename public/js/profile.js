@@ -7,6 +7,7 @@ $(document).ready(function() {
       $("#bio").text(data.bio);
       $("#name").text(data.name);
       $("#userLocation").text(" - " + data.location);
+      $("#profilePicture").attr('src', data.profilePic)
     });
 
     $("#logoutButton").on("click", (event) => {

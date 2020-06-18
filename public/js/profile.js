@@ -19,4 +19,14 @@ $(document).ready(function() {
           location.replace('/');
       })
   })
+
+  $("#updateButton").on("click", (event) => {
+    event.preventDefault();
+    $.ajax({
+        url: '/update',
+        method: 'GET'
+    }).then(() => {
+        location.replace('/update');
+    })
+})
 });  

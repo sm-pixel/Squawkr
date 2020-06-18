@@ -1,6 +1,7 @@
 //submit button
  $(document).ready( function () {
-    console.log("connected")
+    console.log("connected");
+    // let bioBox= $("#bio");
 
     $("#signuperror").hide()
     $(".create-form").submit( function (event) {
@@ -31,5 +32,15 @@
             console.log(err);
             $("#signuperror").show();
         });
+    })
+    let myBioArea = document.getElementById("bio");
+    const remainingCharsText = document.getElementById("bio-remaining");
+    const MAX_CHARS = 200;
+
+    myBioArea.addEventListener("input", () =>{
+        const remaining = MAX_CHARS - myBioArea.value.length;
+        const color = remaining < MAX_CHARS * 0.1 ? "red" : null;
+        remainingCharsText.textContent = `${remaining} characters remaining`;
+        remainingCharsText.style.color = color;
     })
  })

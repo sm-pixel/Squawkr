@@ -29,14 +29,15 @@
     </div>
     <div class="field">
       <label>Bio</label>
-      <textarea placeholder="Tell Us About Yourself" type="text" name="bio" id="bio" rows="5"></textarea>
+      <textarea placeholder="Tell Us About Yourself" type="text" name="bio" id="bio" rows="5" maxlength="200"></textarea>
     </div>
     <div class="ui pointing red basic label" id="signuperror">
       Username or Email already in use
     </div>
+    <div id="bio-remaining">200 characters remaining</div>
     <div>
-      <button class="ui primary submit button" type="submit">Submit</button>
-    </div>
+       <button class="ui primary submit button" type="submit">Submit</button>
+   </div>
 
     <p><a href="/login" class="loginSignupThing">Already have an account? Login here</a></p>
   </form>

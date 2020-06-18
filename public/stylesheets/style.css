@@ -107,7 +107,7 @@ nav {
 }
 
 .profileHeaderDiv {
-    width: 50%;
+    width: 38%;
     text-align: center;
     color: var(--main-blue);
     display: flex;
@@ -135,4 +135,9 @@ nav {
     width: 50%;
     margin: .5em auto;
     font-size: 2rem;
+}
+
+
+#bio-remaining {
+    text-align: right;
 }

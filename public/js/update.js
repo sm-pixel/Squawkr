@@ -1,11 +1,13 @@
 $(document).ready( function () {
     console.log("connected")
+    let idHolder;
     $.get("/api/user_data").then(function(data) {
         console.log(data)
         $("#bio").val(data.bio);
         $("#name").val(data.name);
         $("#location").val(data.location);
-        $("#profilePicLink").val(data.profilePic)
+        $("#profilePicLink").val(data.profilePic);
+        idHolder = data.id;
       });
 
     $("#signuperror").hide()
@@ -43,6 +45,22 @@ $(document).ready( function () {
             // $("#signuperror").show();
         });
     })
+
+    $("#deleteButton").on('click', (event) => {
+        event.preventDefault();
+        let flag = confirm('Are you sure you want to delete account?');
+        if(flag) {
+            $.ajax({
+                url: '/api/user/' + idHolder,
+                method: 'DELETE'
+            }).then((result) => {
+                location.replace('/login');
+            })
+        } else {
+            return;
+        }
+    })
+
     $("#logoutButton").on("click", (event) => {
         event.preventDefault();
         $.ajax({

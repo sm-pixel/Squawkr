@@ -10,6 +10,9 @@ $(document).ready( function () {
 
     $("#signuperror").hide()
     $(".create-form").submit( function (event) {
+        if($("#password").val() === '') {
+            return;
+        }
         event.preventDefault();
         console.log('submitted')
         var name = $("#name").val().trim()

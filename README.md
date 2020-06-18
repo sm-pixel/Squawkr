@@ -10,20 +10,69 @@
 
 ## Table of Contents
 
-* [User Story](#UserStory)
+* [User Story](#User-Story)
+* [Technologies Used](#Technologies-Used)
 * [Installation](#Installation)
-* [Authors](#Authors)
+* [Screenshots of Application](#Screenshots-of-application)
+* [Contributing Authors](#Authors)
 
 ## User Story
 
 ```
-AS A USER,
+AS A USER, who enjoys communicating with my friends
 
-I WANT
+I WANT a way to share short thoughts and comments
 
-SO THAT I
+SO THAT I stay connected with my friends
 ```
+
+## Technologies Used
+<details>
+    <summary markdown="span">Click to expand Technology Details</summary>
+
+Languages
+* HTML
+* CSS
+* Javascript
+
+Libraries
+* jQuery
+* [Moment JS](momentjs.com)
+
+CSS Framework
+* [Semantic UI](semantic-ui.com)
+</details>
+
+## MVP - Minimum Viable Product
+<details>
+    <summary markdown="span">Click to expand MVP Details</summary>
+
+The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
+
+Login page
+
+Sign-up page
+
+Home page
+
+Profile page
+
+</details>
+
+## Project Diagram
+
+![Squawkr Project Diagram]()
+
+*Diagram of user experience for Squawkr*
+
 ## Installation
+To install this application on your local computer fork this repo and download to your local. Then type the command below (make sure you have downloaded all required packages)
+
+```
+npm i
+```
+## Screenshots of Application
+
 
 ## Authors
 * [Khamari Thompson](github.com/khamari13)

@@ -21,11 +21,8 @@ $(document).ready( function () {
 
         }).then(function () {
             console.log("updated");
-            // window.location.replace("/profile");
-            $.ajax({url: "/logout", method: "GET"}).then(() =>{
-                window.location.replace("/home")
-            }
-            )
+            window.location.replace("/profile");
+            
         }).catch(function (err) {
             console.log(err);
             // $("#signuperror").show();

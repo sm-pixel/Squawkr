@@ -6,7 +6,7 @@
 ![Squawker Demo](gif.link)
 
 ## Deployment
-[Squawkr Heroku App](heroku.com)
+[Squawkr Heroku App](https://squawkr-uncc.herokuapp.com/)
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ AS A USER, who enjoys communicating with my friends
 
 I WANT a way to share short thoughts and comments
 
-SO THAT I stay connected with my friends
+SO THAT I stay connected to them.
 ```
 
 ## Technologies Used
@@ -38,6 +38,7 @@ Languages
 Libraries
 * jQuery
 * [Moment JS](momentjs.com)
+* Passport
 
 CSS Framework
 * [Semantic UI](semantic-ui.com)
@@ -75,8 +76,8 @@ npm i
 
 
 ## Authors
-* [Khamari Thompson](github.com/khamari13)
-* [Ryan Devenney](github.com/ryand67)
-* [Tom Savage](github.com/savage1005)
-* [Samantha Morrison](github.com/sm-pixel)
+* [Khamari Thompson](@khamari13)
+* [Ryan Devenney](@ryand67)
+* [Tom Savage](@savage1005)
+* [Samantha Morrison](@sm-pixel)
 

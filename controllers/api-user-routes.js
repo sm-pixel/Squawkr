@@ -31,8 +31,11 @@ module.exports = function(app){
           password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10), null),
           profilePic: req.body.profilePic
         }).then(function(result2) {
-          console.log(req.user)
-          res.json(result2);
+         
+          req.logIn(result2, function(err) {
+            if (err) throw err;
+            res.json(result2);
+          });
         })
       })
   });

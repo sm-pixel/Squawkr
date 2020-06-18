@@ -1,11 +1,14 @@
-# Squawk
+# Squawkr
+
 ![npm](https://img.shields.io/npm/v/inquirer?style=flat-round)![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)![GitHub contributors](https://img.shields.io/github/contributors/ryand67/Squawkr)
 ## Description
 
 ## Demo
+
 ![Squawker Demo](gif.link)
 
 ## Deployment
+
 [Squawkr App](https://squawkr-uncc.herokuapp.com/)
 
 ## Table of Contents
@@ -76,6 +79,7 @@ npm i
 
 
 ## Authors
+
 [Khamari Thompson](@khamari13)
 
 [Ryan Devenney](@ryand67)

@@ -23,7 +23,7 @@ $(document).ready( function () {
             console.log("updated");
             // window.location.replace("/profile");
             $.ajax({url: "/logout", method: "GET"}).then(() =>{
-                window.location.replace("/login")
+                window.location.replace("/home")
             }
             )
         }).catch(function (err) {
@@ -41,4 +41,15 @@ $(document).ready( function () {
             location.replace('/');
         })
     })
- })
+
+    let myBioArea = document.getElementById("bio");
+    const remainingCharsText = document.getElementById("bio-remaining");
+    const MAX_CHARS = 200;
+
+    myBioArea.addEventListener("input", () =>{
+        const remaining = MAX_CHARS - myBioArea.value.length;
+        const color = remaining < MAX_CHARS * 0.1 ? "red" : null;
+        remainingCharsText.textContent = `${remaining} characters remaining`;
+        remainingCharsText.style.color = color;
+    })
+})

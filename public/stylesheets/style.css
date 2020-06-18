@@ -130,11 +130,19 @@ nav {
     margin: 1em 0;
 }
 
-
 .bio {
     margin: .5em 0;
     width: 100%;
     font-size: 2rem;
+}
+
+.bioCard {
+    width: 45%;
+    text-align: center;
+    color: var(--main-blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 #profilePicture{

@@ -9,18 +9,7 @@
     </nav>
     <button class="ui primary submit button" id="logoutButton">Logout</button>
 </header>
-{{!-- contains the bio info --}}
-{{!-- <div class="ui raised very padded text blue inverted container segment">
-     <i class="fab fa-earlybirds"></i>
-    <div class="ui card centered segment">
-        <a class="image" href="#">
-            <img src="">
-        </a>
-        </div>
-        <div class="ui card centered segment">
-            <h3>Welcome <span id="username"></span></h2>
-            <p>Bio: <span id="bio"></span></p>
-        </div> --}}
+
 <div class="profile">
     <div class="profileHeaderDiv centered raised ui segment">
         <img src="" alt="" id="profilePicture">
@@ -28,13 +17,14 @@
         <div class="un-loc">
             <h2><span id="username"></span><span id="userLocation"></span></h2>
         </div>
-        <div class="ui very center padded text container blue">
+        <div class="bioCard ui centered padded text container segment blue">
             <p class="bio">About Me:</p>
             <p class="bio" id="bio"></p>
         </div>
         <div><button class="ui primary submit button" id="updateButton">Update Information</button></div>
     </div>
 </div>
+
 {{#each post}}
 <div class="ui raised very padded text blue inverted container segment">
     <h3 class="ui header">@{{author}}</h3>
@@ -43,5 +33,6 @@
 </div>
 {{/each}}
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/profile.js"></script>

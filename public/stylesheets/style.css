@@ -107,6 +107,10 @@ nav {
 }
 
 .profileHeaderDiv {
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7af3d55bdb08e6cf6fe8a4098ee918caba18adbe
     text-align: center;
     color: var(--main-blue);
     display: flex;

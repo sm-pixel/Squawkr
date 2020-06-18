@@ -6,7 +6,7 @@
 ![Squawker Demo](gif.link)
 
 ## Deployment
-[Squawkr Heroku App](https://squawkr-uncc.herokuapp.com/)
+[Squawkr App](https://squawkr-uncc.herokuapp.com/)
 
 ## Table of Contents
 
@@ -76,8 +76,11 @@ npm i
 
 
 ## Authors
-* [Khamari Thompson](@khamari13)
-* [Ryan Devenney](@ryand67)
-* [Tom Savage](@savage1005)
-* [Samantha Morrison](@sm-pixel)
+[Khamari Thompson](@khamari13)
+
+[Ryan Devenney](@ryand67)
+
+[Tom Savage](@savage1005)
+
+[Samantha Morrison](@sm-pixel)
 

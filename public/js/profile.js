@@ -27,7 +27,6 @@ $(document).ready(function() {
           url: '/logout',
           method: 'GET'
       }).then(() => {
-          console.log('asdf');
           location.replace('/');
       })
   })

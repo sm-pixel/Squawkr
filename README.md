@@ -4,23 +4,13 @@
 
 ## Description
 
-## Demo
-
-![Squawker Demo](gif.link)
+With squawkr, we wanted to create a new social media platform for communicating with friends and family. We wanted to create a slimmed down experience to quickly share your thoughts.  
 
 ## Deployment
 
 [Squawkr App](https://squawkr-uncc.herokuapp.com/)
 
-## Table of Contents
-
-* [User Story](#User-Story)
-* [Technologies Used](#Technologies-Used)
-* [Installation](#Installation)
-* [Screenshots of Application](#Screenshots-of-application)
-* [Contributing Authors](#Authors)
-
-    ## User Story
+## User Story
 
 ```
 AS A USER, who enjoys communicating with my friends

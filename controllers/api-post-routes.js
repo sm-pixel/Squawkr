@@ -8,7 +8,7 @@ module.exports = function(app){
             body: req.body.body,
             authorId: req.user.id,
             author: req.user.username,
-            squawkTime: moment().format('MMMM Do YYYY, h:mm:ss a')
+            squawkTime: moment().tz('America/New_York').format('MMMM Do YYYY, h:mm:ss a')
         }).then((result) => {
             res.json(result);
         })

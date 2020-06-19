@@ -1,6 +1,7 @@
 # Squawkr
 
 ![npm](https://img.shields.io/npm/v/inquirer?style=flat-round)![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)![GitHub contributors](https://img.shields.io/github/contributors/ryand67/Squawkr)
+
 ## Description
 
 ## Demo
@@ -19,7 +20,7 @@
 * [Screenshots of Application](#Screenshots-of-application)
 * [Contributing Authors](#Authors)
 
-## User Story
+    ## User Story
 
 ```
 AS A USER, who enjoys communicating with my friends
@@ -51,7 +52,7 @@ CSS Framework
 <details>
     <summary markdown="span">Click to expand MVP Details</summary>
 
-The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
+After deciding on a project idea we needed to determine the MVP (Minimum Viable Product) criteria. After reaching the MVP we were then able to reach into our "icebox" kanabn to add some more features.
 
 Login page
 
@@ -63,12 +64,6 @@ Profile page
 
 </details>
 
-## Project Diagram
-
-![Squawkr Project Diagram]()
-
-*Diagram of user experience for Squawkr*
-
 ## Installation
 To install this application on your local computer fork this repo and download to your local. Then type the command below (make sure you have downloaded all required packages)
 
@@ -76,7 +71,16 @@ To install this application on your local computer fork this repo and download t
 npm i
 ```
 ## Screenshots of Application
+<details>
+    <summary markdown="span">Click to expand Screenshots</summary>
 
+![](public/img/squawkrlogin)
+![](public/img/squawkrsignup)
+![](public/img/squawkrhome)
+![](public/img/squawkrprofile)
+![](public/img/squawkrupdateprofile)
+
+</details>
 
 ## Authors
 

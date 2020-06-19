@@ -35,7 +35,7 @@
         //Post request passing in the holder object
         $.ajax("/api/signup", {
             type: "POST",
-            data: holders
+            data: holder
         }).then(function() {
             //Go to the login page
             window.location.replace("/login");

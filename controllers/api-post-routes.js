@@ -2,7 +2,7 @@ const db = require('../models');
 const moment = require('moment');
 
 module.exports = function(app){
-    //Create a post
+    //Create a post using passed in information
     app.post('/api/post', (req, res) => {
         db.Post.create({
             body: req.body.body,
@@ -14,11 +14,13 @@ module.exports = function(app){
         })
     })
 
+    //Gets the posts made by a certain author
     app.get('/api/post/:author', (req, res) => {
         let author = req.params.author;
         db.Post.findAll({where: {author: author}}).then((result) => res.json(result));
     })
 
+    //Deletes a post with a certain id
     app.delete('/api/post/:id', (req, res) => {
         let postId = req.params.id;
         db.Post.destroy({where: {id: postId}}).then((result) => res.json(result));

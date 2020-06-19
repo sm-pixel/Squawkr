@@ -3,10 +3,14 @@
     console.log("connected");
     // let bioBox= $("#bio");
 
+    //Hide the error label
     $("#signuperror").hide()
+    
+    //When you submit the create account form
     $(".create-form").submit( function (event) {
         event.preventDefault();
         console.log('submitted')
+        //Grab all of the info in holder variables
         var name = $("#name").val().trim()
         var username = $("#username").val().trim()
         var password = $("#password").val()
@@ -14,9 +18,11 @@
         var bio = $("#bio").val().trim()
         var location = $("#location").val().trim();
         var profilePic = $("#profilePicLink").val().trim();
+        //If there's no profile picture, set it to this default variable
         if(profilePic === ''){
             profilePic = 'https://3.bp.blogspot.com/-qDc5kIFIhb8/UoJEpGN9DmI/AAAAAAABl1s/BfP6FcBY1R8/s1600/BlueHead.jpg';
         }
+        //Object to hold the info
         var holder = {
             name: name,
             username: username,
@@ -26,18 +32,21 @@
             location: location,
             profilePic: profilePic
         }
+        //Post request passing in the holder object
         $.ajax("/api/signup", {
             type: "POST",
-            data: holder
-
+            data: holders
         }).then(function() {
-            console.log("created new user");
+            //Go to the login page
             window.location.replace("/login");
         }).catch(function (err) {
+            //if there's an error show the error label
             console.log(err);
             $("#signuperror").show();
         });
     })
+
+    //Character counter for bio on signup page
     let myBioArea = document.getElementById("bio");
     const remainingCharsText = document.getElementById("bio-remaining");
     const MAX_CHARS = 200;

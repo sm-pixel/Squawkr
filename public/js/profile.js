@@ -10,6 +10,7 @@ $(document).ready(function() {
       $("#profilePicture").attr('src', data.profilePic)
     });
 
+    //When you click update, go to the update page
     $("#updateButton").on("click", (event) => {
       event.preventDefault();
       $.ajax({
@@ -21,16 +22,20 @@ $(document).ready(function() {
       })
     })
 
+    //When you click the trash button
     $(document).on('click', '.trashButton', (event) => {
       let postId = event.target.attributes[0].value;
+      //Create a delete request passing in the post id to delete that post
       $.ajax({
         url: `/api/post/${postId}`,
         method: 'DELETE'
       }).then(() => {
+        //Reload the page
         window.location.reload();
       })
     })
 
+    //When you click the login button, logout
     $("#logoutButton").on("click", (event) => {
       event.preventDefault();
       $.ajax({

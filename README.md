@@ -64,11 +64,15 @@ npm i
 <details>
     <summary markdown="span">Click to expand Screenshots</summary>
 
-![](public/img/squawkrlogin)
-![](public/img/squawkrsignup)
-![](public/img/squawkrhome)
-![](public/img/squawkrprofile)
-![](public/img/squawkrupdateprofile)
+![Login Page](public/img/squawkrlogin.png)
+
+![Signup Page](public/img/squawkrsignup.png)
+
+![Home Page](public/img/squawkrhome.png)
+
+![Profile Page](public/img/squawkrprofile.png)
+
+![Update Profile Page](public/img/squawkrupdateprofile.png)
 
 </details>
 
